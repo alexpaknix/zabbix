@@ -10,7 +10,7 @@ case $1 in
 	chmod -R 744 /opt/zabbix/sh
 	chmod +x /opt/zabbix/{sbin,bin}/*
 	#rm -rf /opt/zabbix/tmp/*
-	chmod +x /sbin/init.d/zabbix
-	ln -s /sbin/init.d/zabbix /sbin/rc3.d/S999zabbix
+	chmod +x /sbin/init.d/zabbix.sh
+	ln -s /sbin/init.d/zabbix.sh /sbin/rc3.d/S999zabbix
 	;;
 esac
