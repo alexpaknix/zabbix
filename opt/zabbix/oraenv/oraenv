@@ -1,4 +1,4 @@
-export ORACLE_HOME=/oracle/BWn/112_64
-export ORACLE_SID=BWn
+export ORACLE_HOME=/oracle/SID/112_64
+export ORACLE_SID=SID
 export PATH=/usr/bin:/usr/sbin/:$ORACLE_HOME/bin
 export nls_lang=american_cis.cl8mswin1251
