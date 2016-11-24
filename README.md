@@ -1,8 +1,8 @@
-zabbix_sapmon_hp-ux
+Monitoring for ORACLE DB on HP-UX, SUSE, Windows
 ===================
 
-Monitoring for SAP BW on HP-UX
-
-
-Download agent from http://www.zabbix.com/download.php and extract the files in /opt/zabbix
-
+Home directory: /opt/zabbix
+User: zabbix
+Enviroment: Shell
+Oracle DB: 11.2.x.x & 12.1.x.x
+Application: SAP
