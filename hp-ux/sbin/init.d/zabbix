@@ -1,0 +1,19 @@
+#!/usr/bin/sh
+case $1 in
+'start')
+        /opt/zabbix/sbin/zabbix_agentd -c /opt/zabbix/conf/zabbix_agentd.conf
+        sleep 1
+        echo "\033[32m""Zabbix starting... PID:\033[m" "\033[31m"`cat /opt/zabbix/zabbix_agentd.pid`"\033[m"
+        ;;
+'stop')
+        echo "\033[31m""Zabbix, must die!""\033[m"
+        kill `cat /opt/zabbix/zabbix_agentd.pid`
+        ;;
+'restart')
+        echo "\033[32m""Zabbix restart... old PID:" "\033[31m"`cat /opt/zabbix/zabbix_agentd.pid`"\033[m"
+        kill `cat /opt/zabbix/zabbix_agentd.pid`
+        sleep 2
+        /opt/zabbix/sbin/zabbix_agentd -c /opt/zabbix/conf/zabbix_agentd.conf
+        echo "\033[32m""Zabbix new PID:" "\033[31m"`cat /opt/zabbix/zabbix_agentd.pid` "\033[m "
+
+esac
