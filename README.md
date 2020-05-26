@@ -11,6 +11,10 @@ Zabbix directory: /opt/zabbix
 
 User: zabbix
 
+mkdir /opt/zabbix
+useradd zabbix --user-group --home-dir /opt/zabbix --comment "Zabbix user"
+
+
 For Linux Installation put *zabbix* file from repository to init.d and create symlink ...
 
 Enviroment: Shell
